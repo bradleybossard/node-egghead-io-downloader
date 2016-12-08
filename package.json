@@ -1,0 +1,25 @@
+{
+  "name": "scrape-egghead-io-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/bradleybossard/scrape-egghead-io-course.git"
+  },
+  "keywords": [],
+  "author": "Bradley Bossard <bradleybossard@gmail.com> (http://bradleybossard.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/bradleybossard/scrape-egghead-io-course/issues"
+  },
+  "homepage": "https://gitlab.com/bradleybossard/scrape-egghead-io-course#README",
+  "dependencies": {
+    "async": "2.1.4",
+    "cheerio": "0.22.0",
+    "fetch": "1.1.0"
+  }
+}
