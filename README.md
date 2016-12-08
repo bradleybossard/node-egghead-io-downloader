@@ -4,8 +4,12 @@
 
 node.js script for downloading an entire egghead.io course.  Sometimes they are offered for free for a short time, and I like to watch them at 2-3 times the speed, which is a premium feature.  So I download them, then use VLC to play them back, etc.  (VLC has best keyboard shortcuts, FYI).
 
-### Installation
+### Dependencies
 This script requires [youtube-dl][1] and zip to be installed on your system.
+
+### Installation
+
+    npm install
 
 ### Usage
 
