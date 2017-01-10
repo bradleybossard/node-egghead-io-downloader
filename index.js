@@ -19,6 +19,7 @@ function sanitizeString(string) {
 	  .replace(/\./g, '-')
     .replace(/\(/g, '')
     .replace(/\)/g, '')
+    .replace(/'/g, '')
 }
 
 var q = async.queue(function(task, callback) {
