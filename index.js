@@ -3,6 +3,7 @@ const async = require('async');
 const cheerio = require('cheerio');
 const fs = require('fs');
 const exec = require('child_process').exec;
+const slugify = require('slugify');
 
 let directoryName = 'Unknown';
 
