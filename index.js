@@ -57,13 +57,15 @@ function fetchFile(url) {
 				fs.mkdirSync(directoryName);
 		}
 
-    // TODO: Add some error handling if no .cell-lesson-title rows 
-    $('.lesson-row').each(function(i, el) {
-      const filename = sanitizeString($(el).find('.cell-lesson-title').text()) + '.mp4';
+    $('.index__rowWrapper__30Oqk').each(function(i, el) {
+      const videoUrl = $(el).find('.flex.bg-white.index__bgLink__2Zu5-').attr('href');
+      const filename = videoUrl.substr(videoUrl.lastIndexOf('/') + 1)
       const filepath = directoryName + '/' +
 											 pad(i+1, 2) + '-' +
-  										 filename;
-      const videoUrl = $(el).find('.cell-lesson-title a').attr('href');
+  										 filename + '.mp4';
+      console.log('videoUrl = ', videoUrl);
+      console.log('  filename = ', filename);
+      console.log('  filepath = ', filepath);
 			q.push({url: videoUrl, filepath: filepath}, function() {
 				console.log('Finished processing ' + filename);
   		});
