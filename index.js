@@ -13,16 +13,6 @@ function pad(num, size) {
 	return s;
 }
 
-function sanitizeString(string) {
-  return string
-	  .trim()
-	  .replace(/ /g, '-')
-	  .replace(/\./g, '-')
-    .replace(/\(/g, '')
-    .replace(/\)/g, '')
-    .replace(/'/g, '')
-}
-
 var q = async.queue(function(task, callback) {
 	const cmd = 'youtube-dl ' + task.url + ' -o ' + task.filepath;
 	const child = exec(cmd,  function (err, stdout, stderr) {
