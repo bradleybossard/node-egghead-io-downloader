@@ -51,7 +51,7 @@ function fetchFile(url) {
   fetch.fetchUrl(url, function(err, meta, body) {
 		let $ = cheerio.load(body);
 
-    directoryName = sanitizeString($('.title-subtitle-block .title').text());
+    directoryName = slugify($('.f4.f3-m.f2-l.mt3.mt0-l.avenir.fw6.lh-copy.mb3.flex').text().toLowerCase());
 
 		if (!fs.existsSync(directoryName)){
 				fs.mkdirSync(directoryName);
